@@ -1,7 +1,6 @@
 var express = require('express');
 var fs = require("fs");
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -10,14 +9,20 @@ var session = require('express-session');
 var env = require('dotenv').load();
 var banned = [];
 banUpperCase("./public/", "");
+var cons = require('consolidate');
 
 var index = require('./routes/index');
 var gallery = require('./routes/gallery');
 var login = require('./routes/login');
-// var signup = require('./routes/signup');
+var signup = require('./routes/signup');
 var about = require('./routes/about');
 var trips = require('./routes/trips');
 var app = express();
+
+app.engine('html', cons.swig)
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'html');
+
 
 app.use(lower);
 app.use(ban);
@@ -26,14 +31,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true}));
-// app.use(passport.initialize());
-// app.use(passport.session()); // persistent login sessions.
+app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true}));
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions.
 
 app.use('/', index);
 app.use('/gallery', gallery);
 app.use('/login', login);
-// app.use('/signup', signup);
+app.use('/signup', signup);
 app.use('/about', about);
 app.use('/trips', trips);
 

@@ -1,0 +1,30 @@
+body {
+  padding: 100px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p {
+  color: #000000;
+}
+
+.ui.menu .item img.logo {
+	margin-right: 1.5em;
+}
+
+.main.container {
+	margin-top: 7em;
+}
+
+.wireframe {
+	margin-top: 2em;
+}
+
+.ui.footer.segment {
+	margin: 5em 0em 0em;
+	padding: 5em 0em;
+}
+
