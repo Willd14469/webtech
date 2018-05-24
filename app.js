@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require("fs");
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -7,6 +8,8 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
 var env = require('dotenv').load();
+var banned = [];
+banUpperCase("./public/", "");
 
 var index = require('./routes/index');
 var gallery = require('./routes/gallery');
@@ -16,9 +19,8 @@ var about = require('./routes/about');
 var trips = require('./routes/trips');
 var app = express();
 
-
-
-// uncomment after placing your favicon in /public
+app.use(lower);
+app.use(ban);
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -44,7 +46,6 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
@@ -52,5 +53,40 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// Make the URL lower case.
+function lower(req, res, next) {
+    req.url = req.url.toLowerCase();
+    next();
+}
+
+function ban(req, res, next) {
+    for (var i=0; i<banned.length; i++) {
+        var b = banned[i];
+        if (req.url.startsWith(b)) {
+            res.status(404).send("Filename not lower case");
+            return;
+        }
+    }
+    next();
+}
+
+// Redirect the browser to the login page.
+function auth(req, res, next) {
+    res.redirect("/login.html");
+}
+
+function banUpperCase(root, folder) {
+    var folderBit = 1 << 14;
+    var names = fs.readdirSync(root + folder);
+    for (var i=0; i<names.length; i++) {
+        var name = names[i];
+        var file = folder + "/" + name;
+        if (name != name.toLowerCase()) banned.push(file.toLowerCase());
+        var mode = fs.statSync(root + file).mode;
+        if ((mode & folderBit) == 0) continue;
+        banUpperCase(root, file);
+    }
+}
 
 module.exports = app;
