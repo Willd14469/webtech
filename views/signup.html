@@ -66,28 +66,26 @@
 	}
 	</style>
  </head> 
-<body>
-  
+	<body>
+		<h2>Sign Up Form</h2>
+		<form action="/signup" method="post">
 
-	<h2>Sign Up Form</h2>
-	<form action="/signup" method="post">
+		  <div class="container">
+		    <h1>Sign Up</h1>
+		    	<p>Please fill in this form to create an account.</p>
+		    <hr>
+		    <label for="username"><b>Username</b></label>
+		    <input type="text" placeholder="Enter Username" name="username" required>
 
-	  <div class="container">
-	    <h1>Sign Up</h1>
-	    	<p>Please fill in this form to create an account.</p>
-	    <hr>
-	    <label for="username"><b>Username</b></label>
-	    <input type="text" placeholder="Enter Username" name="username" required>
+		    <label for="password"><b>Password</b></label>
+		    <input type="password" placeholder="Enter Password" name="password" required>
+		        
+		    <button type="submit">Sign Up</button>
 
-	    <label for="password"><b>Password</b></label>
-	    <input type="password" placeholder="Enter Password" name="password" required>
-	        
-	    <button type="submit">Sign Up</button>
+		  <div class="container" style="background-color:#f1f1f1">
+		    Already a member?<a href="/login"> Sign In </a>	
+		  </div>
+		</form>
 
-	  <div class="container" style="background-color:#f1f1f1">
-	    Already a member?<a href="/login"> Sign In </a>	
-	  </div>
-	</form>
-
-</body>
+	</body>
 </html>

@@ -17,6 +17,7 @@ var login = require('./routes/login');
 var signup = require('./routes/signup');
 var about = require('./routes/about');
 var trips = require('./routes/trips');
+var logout = require('./routes/logout');
 var app = express();
 
 app.engine('html', cons.swig)
@@ -31,7 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true}));
+app.use(session({ secret: 'motorcycles', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions.
 
@@ -41,6 +42,7 @@ app.use('/login', login);
 app.use('/signup', signup);
 app.use('/about', about);
 app.use('/trips', trips);
+app.use('/logout', logout);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

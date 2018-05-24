@@ -66,28 +66,27 @@
 	}
 	</style>
  </head> 
-<body>
-  
+	<body>
+	  
+		<h2>Login Form</h2>
+		<form action="/login"  method="post">
+		  <div class="container">
+		    <h1>Login</h1>
+		    	<p>Please login with your credentials.</p>
+		    <hr>
+		    <label for="username"><b>Username</b></label>
+		    <input type="text" placeholder="Enter Username" name="username" required>
 
-	<h2>Login Form</h2>
-	<form action="/login"  method="post">
-	  <div class="container">
-	    <h1>Login</h1>
-	    	<p>Please login with your credentials.</p>
-	    <hr>
-	    <label for="username"><b>Username</b></label>
-	    <input type="text" placeholder="Enter Username" name="username" required>
+		    <label for="password"><b>Password</b></label>
+		    <input type="password" placeholder="Enter Password" name="password" required>
+		        
+		    <button type="submit">Login</button>
+		  </div>
 
-	    <label for="password"><b>Password</b></label>
-	    <input type="password" placeholder="Enter Password" name="password" required>
-	        
-	    <button type="submit">Login</button>
-	  </div>
+		  <div class="container" style="background-color:#f1f1f1">
+		    Not a member?<a href="/signup"> Sign Up </a><
+		  </div>
+		</form>
 
-	  <div class="container" style="background-color:#f1f1f1">
-	    Not a member?<a href="/signup"> Sign Up </a><
-	  </div>
-	</form>
-
-</body>
+	</body>
 </html>
