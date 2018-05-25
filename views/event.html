@@ -16,10 +16,34 @@
 		</ul>
 	</div>
 
-		
-
-
-
-
+	<form action="/event" method="post">
+	  <div class="field">
+	    <h4>Event name</h4>
+	    <input type="text" name="event_name" placeholder="Event name"/>
+	  </div>
+	  <div class="fields">
+	      <h4>Start time</h4>
+	        <div class="field">
+	          <input type="text" name="event-start[start-year]" maxlength="15" placeholder="Start date"/>
+	        </div>
+	    </div>
+	      <h4>End time</h4>
+	        <div class="field">
+	          <input type="text" name="event-end[end-year]" maxlength="15" placeholder="End date"/>
+	        </div>
+	  <div class="field">
+	    <h4>Location</h4>
+	    <input type="text" name="event_location" placeholder="Event location"/>
+	  </div>
+	  <div class="field">
+	    <h4>Description</h4>
+	    <input type="text" name="event_description" placeholder="Event description"/>
+	  </div>
+	  <div class="field">
+	    <h4>Contact details</h4>
+	    <input type="text" rows="2" name="event_contact" placeholder="Event contact"/>
+	  </div>
+	  <button class="ui button" type="submit">Create event</button>
+	</form>
  	</body>
 </html>
