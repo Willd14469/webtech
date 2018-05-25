@@ -1,0 +1,175 @@
+
+
+
+div.home {
+    background-image: url("../images/homepage.jpg");
+    background-color: black;
+    background-repeat: space;
+    background-position: center top;
+    background-size: cover;
+    height: 60vw;
+
+}
+.overview {
+    background-color: white;
+    height: auto;
+
+}
+
+.titleDiv{
+    font-size: 2vw;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#map{
+    width:100%;
+    height:35vw;
+    /*background:yellow;*/
+    margin: auto;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+}
+
+li {
+    float: left;
+    width: 16.5%;
+}
+
+li a {
+    font-family: "Impact";
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 25px;
+    text-decoration: none;
+
+}
+li button {
+    font-family: "Impact";
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 25px;
+    text-decoration: none;
+    margin: auto;
+}
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+h1.title {
+    position: sticky;
+    top: 0;
+    color: white;
+    font-family: "TradeGothicLTComBoldCondensed20", sans-serif;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px black;
+    font-size: 3vw;
+    z-index: 3;
+
+}
+
+div#aboutus{
+    color: white;
+    max-width: 30%;
+    padding: 5px;
+    max-height: auto;
+    text-align: justify;
+    font-family: "TradeGothicLTComBoldCondensed20", sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2vw;
+
+    text-shadow: 1px 1px black;
+
+    position: relative;
+    top: 35%;
+    left: 60%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+p.aboutus{
+    padding: 0px 20px;
+}
+
+div.galleryrow{
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+
+
+div.gallery {
+    border: 1px solid #ccc;
+    height: 20vw;
+    padding: 1px;
+    box-sizing: border-box;
+}
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<link rel="stylesheet" type="text/css" href="mystyle2.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head> 
+<body>
+	<div class="home">	
+		<ul>
+		  <li><a href="#home">Home</a></li>
+		  <li><a href="#gallery">Gallery</a></li>
+		  <li><a href="#trips">Trips</a></li>
+		  <li><a href="#about">About</a></li>
+		</ul>
+	</div>
+
+	<div class="meettheteam">
+		<span class="container">
+		  <img src="hd2.png" alt="Avatar" class="image" ">
+		  <div class="middle">
+		   <div class="text">John Doe</div>
+		  </div>
+		</span>
+		<span class="container">
+		  <img src="hd2.png" alt="Avatar" class="image" ">
+		  <div class="middle">
+		   <div class="text">John Doe</div>
+		  </div>
+		</span>
+	</div>
+	<div id="buttonDiv">
+			<span><button onclick="myFunctionShow()">Show</button></span>
+			<span><button onclick="myFunctionHide()">Hide</button></span>
+	</div>
+
+
+	<div id="bigcontainer">
+		<img src="hd2.png" alt="Avatar" class="imagebig" ">
+		<div id= "minicontainer">
+			<img src="hd2.png" alt="Avatar" class="smallimage" ">
+			<img src="hd2.png" alt="Avatar" class="smallimage" ">
+			<img src="hd2.png" alt="Avatar" class="smallimage" ">
+		</div>
+	</div>
+
+
+	<div class="meettheteam">
+		<span class="container">
+		  <img src="hd2.png" alt="Avatar" class="image" ">
+		  <div class="middle">
+		   <div class="text">John Doe</div>
+		  </div>
+		</span>
+		<span class="container">
+		  <img src="hd2.png" alt="Avatar" class="image" ">
+		  <div class="middle">
+		   <div class="text">John Doe</div>
+		  </div>
+		</span>
+	</div>
+
+	<script>
+	function myFunctionHide() {
+	    document.getElementById("bigcontainer").style.display = "none";
+	}
+	function myFunctionShow() {
+	    document.getElementById("bigcontainer").style.display = "block";
+	}
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<link rel="stylesheet" type="text/css" href="stylesheet/mystyle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	
+	<ul>
+		  <li><a href="home">Home</a></li>
+		  <li><a href="gallery">Gallery</a></li>
+		  <li><a href="trips">Trips</a></li>
+		  <li><a href="about">About</a></li>
+		  <li> <a href="login">Login</a></li>
+		  <li> <a href="logout">Logout </a></li>
+	</ul>
+
+
+	<div class="content">
+
+		 <div class="row">
+		  <div class="column">
+		    <div class="card">
+		      <img src="images/willpic.jpg" alt="Will" style="width:100%">
+		      <div class="container">
+		        <h2>Will Derriman</h2>
+		        <p class="title">President</p>
+		        <p>Hi, I'm Will. I've spent my entire life on two wheels one way or another. Biking to be is much more than just a form of transport, its also my passion and my way to let out the stress of life.</p>
+		        <p><button class="button" id="btn1">My bike</button></p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="column">
+		    <div class="card">
+		      <img src="images/patrickpic.jpg" alt="Patrick" style="width:100%">
+		      <div class="container">
+		        <h2>Patrick Boda</h2>
+		        <p class="title">Vice President</p>
+		        <p>Hi I am Patrick. I have always been a petrolhead, whilst I love cars, my true passion lies in motorcycles.
+				I have started riding since I was 16, and haven't stopped ever since. I cannot imagine my life without my motorcycle. Hope to grow my collection of bikes and enjoy having as many as I can afford.</p>
+		        <p><button class="button" id="btn2">My bike</button></p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="column">
+		    <div class="card">
+		      <img src="images/antonpic.jpg" alt="Antonn" style="width:100%">
+		      <div class="container">
+		        <h2>Antonn Cheeseman</h2>
+		        <p class="title">Secretary</p>
+		        <p>Antonn is one of the newer members of our tightly knit community but definitly one of the most commited to biking and the group as a whole. He just got his A2 license and is riding his fantastic ZXR400.</p>
+		        <p><button class="button" id="btn3">My bike</button></p>
+		      </div>
+		    </div>
+		  </div>
+		</div> 
+
+		<div class="row">
+		  <div class="column">
+		    <div class="card">
+		      <img src="images/benpic.jpg" alt="Will" style="width:100%">
+		      <div class="container">
+		        <h2>Ben Gray</h2>
+		        <p class="title">Treasurer</p>
+		        <p>Ben is also one of our newer members but is also really keen to get out and enjoy the wonders of biking. He is also a very keen photographer.</p>
+		        <p><button class="button" id="btn4">My bike</button></p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="column">
+		    <div class="card">
+		      <img src="images/jonesypic.jpg" alt="Patrick" style="width:100%">
+		      <div class="container">
+		        <h2>Alex "Jonesy" Jones</h2>
+		        <p class="title">Kawasaki Ninja Lover</p>
+		        <p>Ahh, Jonesy, he REALLY loves the ninjas. Hes had two of them now and has even ridden one with a 'tempremental' cooling system 2000miles all the way down to the south of France with us on one of our big bikes trips (although I did have to carry a bottle of coolant the whole way for him too).</p>
+		        <p><button class="button" id="btn5">My bike</button></p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="column">
+		    <div class="card">
+		      <img src="images/rossnrosiepic.jpg" alt="Antonn" style="width:100%">
+		      <div class="container">
+		        <h2>Ross and Rosie</h2>
+		        <p class="title">Versys forever</p>
+		        <p>Ross is more or less our resident expert when it comes to fixing 'something'. Hes always keen to play around with bikes and just find ways of making them run smoother or just fix little niggles here and there.</p>
+		        <p><button class="button" id="btn6">My bike</button></p>
+		      </div>
+		    </div>
+		  </div>
+		</div> 
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <img id="myImg" src="images/jonesypic.jpg" alt="Patrick" style="width:100%">
+		    <p id="blerb">Some text in the Modal..</p>
+		  </div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+	<script type="text/javascript">
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		} 
+	</script>
+	<script type="text/javascript">
+				// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var btn3 = document.getElementById("btn3");
+		var btn4 = document.getElementById("btn4");
+		var btn5 = document.getElementById("btn5");
+		var btn6 = document.getElementById("btn6");
+
+		var blerb = document.getElementById("blerb");
+
+
+		var img = document.getElementById("myImg");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on the button, open the modal
+		btn1.onclick = function() {
+			img.src="images/willbike.jpg";
+			blerb.innerHTML = "KTM 1290 Superadventure S";
+		    modal.style.display = "block";
+		}
+		btn2.onclick = function() {
+			img.src="images/bikes/929.jpg";
+			blerb.innerHTML = "Honda Fireblade 929";
+		    modal.style.display = "block";
+		}
+		btn3.onclick = function() {
+			img.src="images/bikes/zxr400g.jpg";
+			blerb.innerHTML = "Kawasaki ZXR400";
+		    modal.style.display = "block";
+		}
+		btn4.onclick = function() {
+			img.src="images/bikes/zxr400b.jpg";
+			blerb.innerHTML = "Kawasaki ZXR400";
+		    modal.style.display = "block";
+		}
+		btn5.onclick = function() {
+			img.src="images/bikes/636.jpg";
+			blerb.innerHTML = "Kawasaki Ninja 636";
+		    modal.style.display = "block";
+		}
+		btn6.onclick = function() {
+			img.src="images/bikes/versys.png";
+			blerb.innerHTML = "Kawasaki Versys 650";
+		    modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		} 
+	</script>
+	
+</body> 
