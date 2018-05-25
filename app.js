@@ -12,11 +12,12 @@ banUpperCase("./public/", "");
 var cons = require('consolidate');
 
 var index = require('./routes/index');
+var home = require('./routes/home');
 var gallery = require('./routes/gallery');
 var login = require('./routes/login');
 var signup = require('./routes/signup');
 var about = require('./routes/about');
-var trips = require('./routes/trips');
+var event = require('./routes/event');
 var logout = require('./routes/logout');
 var app = express();
 
@@ -34,14 +35,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret: 'motorcycles', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions.
+app.use(passport.session()); 
 
 app.use('/', index);
+app.use('/home', home);
 app.use('/gallery', gallery);
 app.use('/login', login);
 app.use('/signup', signup);
 app.use('/about', about);
-app.use('/trips', trips);
+app.use('/event', event);
 app.use('/logout', logout);
 
 // catch 404 and forward to error handler

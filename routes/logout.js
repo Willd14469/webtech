@@ -4,13 +4,10 @@ var express = require('express');
 var router = express.Router();
 router.get('/', checkAuth, function (req, res) {
     delete req.session.user_id;
-    res.send('You have been logged out!');
-
+    // res.send('You have been logged out!');
+	res.render('index');
 });
 
-router.post('/', function(req, res){
-	res.redirect('/');
-});
 function checkAuth(req, res, next) {
     if (!req.session.user_id) {
         res.send('You are not authorized to view this page');

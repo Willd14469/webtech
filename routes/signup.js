@@ -14,7 +14,6 @@ router.get('/', function (req, res) {
     res.render('signup', { title: 'Sign-up' });
 });
 router.post('/', function (req, res) {
-    console.log('Signup POST called...');
     console.log(req.body);
     var username = req.body.username;
     var password = req.body.password;
@@ -42,7 +41,7 @@ router.post('/', function (req, res) {
                                 res.send('session user_id == ', -1);
                             }
                             console.log(req.session.user_id);
-                            res.redirect('/');
+                            res.redirect('/home');
                         });
                     });
                 });

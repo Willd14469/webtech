@@ -10,7 +10,6 @@ var bodyParser = require('body-parser');
 var sqlite3 = require('sqlite3');
 var db = new sqlite3.Database('./database.db');
 var crypto = require("crypto");
-/* GET login form */
 router.get('/', function (req, res) {
     res.render('login', { title: 'Login' });
 });
@@ -32,7 +31,7 @@ router.post('/', function (req, res) {
                 req.session.user_id = row.user_id;
                 req.session.username = row.username;
                 console.log('session user_id', req.session.user_id);
-                res.redirect('/');
+                res.redirect('/home');
             }
             else {
                 console.log('Login failed.');
