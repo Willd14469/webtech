@@ -1,7 +1,7 @@
-Added new express server system
+Run npm install command to install relevant node_modules
 
-To run it now need to type npm start, and visit 8080
+To run the express server type npm start, and visit localhost:8080
 
-Home page is the static page inside the Public directory "index.html"
+One of the members already available in the database is user "patrick" which can be logged in with password "123456" for testing purposes
 
-Everything else is being served through a script from the router directory, having the relevant html page inside the views directory
+
