@@ -1,63 +1,19 @@
 <!DOCTYPE html>
 <html>
  <head>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4II1rZ-h1YFvuZcHVV3izA7_Pv5XXR2s&callback=myMap"></script>
-
+<link rel="stylesheet" type="text/css" href="stylesheet/mystyle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head> 
 <body>
 	<div class="home">	
 		<ul>
-		  <li><a href="#home">Home</a></li>
-		  <li><a href="#gallery">Gallery</a></li>
-		  <li><a href="#trips">Trips</a></li>
-		  <li><a href="#about">About</a></li>
-		  <li>
-		  	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-			<div id="id01" class="modal">
-			  
-			  <form class="modal-content animate" action="/action_page.php">
-			    <div class="imgcontainer">
-			      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-			      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-			    </div>
-
-			    <div class="container">
-			      <label for="uname"><b>Username</b></label>
-			      <input type="text" placeholder="Enter Username" name="uname" required>
-
-			      <label for="psw"><b>Password</b></label>
-			      <input type="password" placeholder="Enter Password" name="psw" required>
-			        
-			      <button type="submit">Login</button>
-			      <label>
-			        <input type="checkbox" checked="checked" name="remember"> Remember me
-			      </label>
-			    </div>
-
-			    <div class="container" style="background-color:#f1f1f1">
-			      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-			      <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
-			    </div>
-			  </form>
-			</div>
-
-			<script>
-			// Get the modal
-			var modal = document.getElementById('id01');
-
-			// When the user clicks anywhere outside of the modal, close it
-			window.onclick = function(event) {
-			    if (event.target == modal) {
-			        modal.style.display = "none";
-			    }
-			}
-			</script>
-		  </li>
-
+		  <li><a href="home">Home</a></li>
+		  <li><a href="gallery">Gallery</a></li>
+		  <li><a href="trips">Trips</a></li>
+		  <li><a href="about">About</a></li>
+		  <li> <a href="login">Login</a></li>
+		  <li> <a href="logout">Logout </a></li>
 		</ul>
 
 		<h1 class="title"> University of Bristol Motorcycle Club </h1>
@@ -77,7 +33,7 @@
 		<div class="responsive">
 		  <div class="gallery">
 		    <a target="_blank" href="hd2.png">
-		      <img src="hd2.png" alt="MV Agusta">
+		      <img src="images/hd2.png" alt="MV Agusta">
 		    </a>
 		    <div class="desc">MV Agusta</div>
 		  </div>
@@ -86,7 +42,7 @@
 		<div class="responsive">
 		  <div class="gallery">
 		    <a target="_blank" href="qhd2.jpg">
-		      <img src="qhd2.jpg" alt="Ducati panigale" width="600" height="400">
+		      <img src="images/qhd2.jpg" alt="Ducati panigale" width="600" height="400">
 		    </a>
 		    <div class="desc">Ducati Panigale 959</div>
 		  </div>
@@ -95,7 +51,7 @@
 		<div class="responsive">
 		  <div class="gallery">
 		    <a target="_blank" href="hd4.png">
-		      <img src="hd4.png" alt="MopedThing" width="600" height="400">
+		      <img src="images/hd4.png" alt="MopedThing" width="600" height="400">
 		    </a>
 		    <div class="desc">Good old Triumph Bonneville</div>
 		  </div>
@@ -104,7 +60,7 @@
 		<div class="responsive">
 		  <div class="gallery">
 		    <a target="_blank" href="hd6.png">
-		      <img src="hd6.png" alt="Triumph Bonneville" width="600" height="400">
+		      <img src="images/hd6.png" alt="Triumph Bonneville" width="600" height="400">
 		    </a>
 		    <div class="desc">Ducati Multistrada</div>
 		  </div>
@@ -113,7 +69,7 @@
 			<div class="responsive">
 			  <div class="gallery">
 			    <a target="_blank" href="whd5.jpg">
-			      <img src="whd5.jpg" alt="KTM Duke">
+			      <img src="images/whd5.jpg" alt="KTM Duke">
 			    </a>
 			    <div class="desc">KTM Duke</div>
 			  </div>
@@ -122,7 +78,7 @@
 			<div class="responsive">
 			  <div class="gallery">
 			    <a target="_blank" href="whd6.jpg">
-			      <img src="whd6.jpg" alt="Suzuki GSXR" width="600" height="400">
+			      <img src="images/honda.png" alt="Suzuki GSXR" width="600" height="400">
 			    </a>
 			    <div class="desc">Suzuki GSXR</div>
 			  </div>
@@ -131,7 +87,7 @@
 			<div class="responsive">
 			  <div class="gallery">
 			    <a target="_blank" href="whd1.jpg">
-			      <img src="whd1.jpg" alt="Vyrus" width="600" height="400">
+			      <img src="images/kawasaki.png" alt="Vyrus" width="600" height="400">
 			    </a>
 			    <div class="desc">Vyrus</div>
 			  </div>
@@ -140,7 +96,7 @@
 			<div class="responsive">
 			  <div class="gallery">
 			    <a target="_blank" href="whd4.jpg">
-			      <img src="whd4.jpg" alt="Oldschool Cool" width="600" height="400">
+			      <img src="images/whd4.jpg" alt="Oldschool Cool" width="600" height="400">
 			    </a>
 			    <div class="desc">Oldschool Cool</div>
 			  </div>
@@ -189,17 +145,12 @@
 
 		  };
 		  var map = new google.maps.Map(mapCanvas, mapOptions);
-
-		 
 		}
 		</script>
 
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4II1rZ-h1YFvuZcHVV3izA7_Pv5XXR2s&callback=myMap"></script>
 		
-
 	</div>
-
-
 
 </body>
 </html>
