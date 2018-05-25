@@ -1,6 +1,3 @@
-
-
-
 div.home {
     background-image: url("../images/homepage.jpg");
     background-color: black;
@@ -104,6 +101,27 @@ div#aboutus{
     border-radius: 5px;
 }
 
+div#gallery{
+    color: white;
+    max-width: 90%;
+    padding: 10px;
+    max-height: auto;
+    text-align: justify;
+    font-family: "TradeGothicLTComBoldCondensed20", sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2vw;
+
+    text-shadow: 1px 1px black;
+
+    position: relative;
+    top: 37.5%;
+    left: 5%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;    
+}
+
 p.aboutus{
     padding: 0px 20px;
 }
@@ -171,6 +189,7 @@ div.desc {
 }
 
 
+
 body {font-family: Arial, Helvetica, sans-serif;}
 form {
     border: 3px solid #f1f1f1;
@@ -200,7 +219,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-    background-color: #f44336;
+    background-color: #000;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -227,7 +246,7 @@ button:hover {
 
 img.avatar {
     width: 60%;
-    border-radius: 70%;
+    /*border-radius: 70%;*/
 }
 
 .container {
@@ -236,16 +255,14 @@ img.avatar {
 
 }
 .button {
-    left:10px;
-    background-color: #f44336;
+    background-color: #000;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 14px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
     width: 100%;
 
@@ -264,4 +281,122 @@ span.password {
     .cancelbtn {
        width: 100%;
     }
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
+/*                   Gallery Styles                                                 */
+/*----------------------------------------------------------------------------------*/
+
+ /* Three columns side by side */
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    height: auto;
+}
+
+.content{
+
+    max-width: 1500px;
+    margin: 10px auto;
+}
+
+
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 100%;
+    margin-bottom: auto;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    height: 100%;
+    margin-bottom: auto;
+}
+
+/* Some left and right padding inside the container */
+.container {
+    padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+} 
+
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.modal-content img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
 }

@@ -82,7 +82,7 @@ function ban(req, res, next) {
 
 // Redirect the browser to the login page.
 function auth(req, res, next) {
-    res.redirect("/login.html");
+    res.redirect("/login");
 }
 
 function banUpperCase(root, folder) {

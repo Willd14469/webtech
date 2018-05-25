@@ -22,12 +22,10 @@ router.post('/', function (req, res) {
             throw err;
         }
         if (row) {
-            console.log('Selected following row:');
             console.log(row);
-            var password_hash_with_salt = hash_password(password, row.salt);
-            console.log('Password hash with salt == ', password_hash_with_salt);
-            if (password_hash_with_salt === row.password) {
-                console.log('Input password hash is the same as password in db, so we can log-in the user.');
+            var password_hash_salt = hash_password(password, row.salt);
+            console.log('Password hash with salt == ', password_hash_salt);
+            if (password_hash_salt === row.password) {
                 req.session.user_id = row.user_id;
                 req.session.username = row.username;
                 console.log('session user_id', req.session.user_id);
@@ -35,7 +33,7 @@ router.post('/', function (req, res) {
             }
             else {
                 console.log('Login failed.');
-                res.render('login');
+                res.render('signup');
             }
         }
         else {

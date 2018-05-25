@@ -3,23 +3,70 @@
  <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/stylesheet/mystyle.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+		.mySlides {display:none;}
+	</style>
 
  </head> 
  	<body>
- 	<div class="home">	
 		<ul>
 		  <li><a href="home">Home</a></li>
-		  <li><a href="gallery">Gallery</a></li>
-		  <li><a href="event">Events</a></li>
 		  <li><a href="about">About</a></li>
+		  <li><a href="event">Events</a></li>
+		  <li><a href="gallery">Gallery</a></li>
 		  <li> <a href="login">Login</a></li>
 		</ul>
-	</div>
 
+<h2 class="w3-center">Memories</h2>
+<div class="w3-content w3-section" style="max-width:1000px; max-height: 800px">
+  <img class="mySlides" src="/images/memories/1.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/2.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/3.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/5.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/6.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/7.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/8.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/10.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/11.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/12.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/13.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/14.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/15.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/16.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/17.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/18.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/19.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/20.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/22.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/23.jpg" style="width:100%">
+  <img class="mySlides" src="/images/memories/24.jpg" style="width:100%">
 
+</div>
+<div id="gallery">
+	<p class="gallery">
+		We are a very active motorcycle group, who frequently organise trips, ride outs, trips to the pub, as it can be seen above. We pride ourself in sharing memories about bikes, funny moments and places we got lost at. 
+	</p>
+	<p>
+		You can join us in our adventures by following the events page. Also by signing up, you can propose and create events.
+	</p>
+</div>
+<script>
+	var myIndex = 0;
+	loop();
 
+	function loop() {
+	    var i;
+	    var x = document.getElementsByClassName("mySlides");
+	    for (i = 0; i < x.length; i++) {
+	       x[i].style.display = "none";  
+	    }
+	    myIndex++;
+	    if (myIndex > x.length) {myIndex = 1}    
+	    x[myIndex-1].style.display = "block";  
+	    setTimeout(loop, 2000); 
+	}
+</script>
 
-
-
- 	</body>
+ </body>
 </html>

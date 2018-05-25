@@ -18,13 +18,13 @@ router.post('/', function (req, res) {
     var username = req.body.username;
     var password = req.body.password;
     var salt = generate_salt(512);
-    var password_hash_with_salt = hash_password(password, salt);
+    var password_hash_salt = hash_password(password, salt);
     db.get('SELECT username, user_id FROM users WHERE username = ?', username, function (err, row) {
         if (!row) {
             console.log('Username does not exist in the database.');
             db.serialize(function () {
                 var statement = db.prepare("INSERT INTO users (username, password, salt) VALUES (?, ?, ?)");
-                statement.run([username, password_hash_with_salt, salt], function () {
+                statement.run([username, password_hash_salt, salt], function () {
                     statement.finalize();
                     db.get('SELECT username, user_id FROM users WHERE username = ?', username, function (err, row) {
                         if (err)
